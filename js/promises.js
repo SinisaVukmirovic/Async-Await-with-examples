@@ -42,4 +42,3 @@ myNextPromise.then(value => {
 myPromise.then(value => {
     console.log(value);
 });
-
