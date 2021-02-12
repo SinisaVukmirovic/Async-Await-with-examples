@@ -48,4 +48,25 @@ const postToWebPage = (data) => {
     console.log(data);
 };
 
-getAllUserEmails();
+// getAllUserEmails();
+
+// ======================================
+// Example 2 with 2nd parameter in fetch and 2 accept types of data
+// ======================================
+
+const getDadJokes = async () => {
+    const response = await fetch('https://icanhazdadjoke.com', {
+        method: 'GET',
+        headers: {
+            Accept: 'application/json'
+            // Accept: 'text/plain'
+        }
+    });
+
+    const jsonJokeData = await response.json();
+    // const textJokeData = await response.text();
+
+    console.log(jsonJokeData);
+};
+
+getDadJokes();
